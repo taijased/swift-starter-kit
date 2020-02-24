@@ -11,12 +11,18 @@ import UIKit
 final class SplashViewController: UIViewController {
     
     
+    
+    
+    
+    
     fileprivate let logoView: ARQIconView = {
         let view = ARQIconView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.fillColor = .white
         return view
     }()
+    
+    
     
     
     
@@ -48,7 +54,7 @@ final class SplashViewController: UIViewController {
         
         //Animation: - Bounce
         
-        UIView.animate(withDuration: 1.75, animations: {
+        UIView.animate(withDuration: 1.5, animations: {
             self.logoView.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
         }) { _ in
             UIView.animate(withDuration: 0.25) {

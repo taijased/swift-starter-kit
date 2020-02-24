@@ -10,6 +10,18 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
     
+    
+    
+    
+    fileprivate let bgView: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.image = UIImage(named: "artwork")
+        return view
+    }()
+    
+    
+    
     fileprivate let titleLabel: UILabel = {
         let label = UILabel.H1.bold
         label.text = "Welcome to ARQ Viewer"
@@ -51,6 +63,9 @@ final class WelcomeViewController: UIViewController {
         self.view.alpha = 0
         view.backgroundColor = .white
         
+        
+
+        
         view.addSubview(enterButton)
         enterButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         enterButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
@@ -70,8 +85,21 @@ final class WelcomeViewController: UIViewController {
         titleLabel.heightAnchor.constraint(equalToConstant: 80).isActive = true
         
         
+        
+        view.addSubview(bgView)
+        bgView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 45).isActive = true
+        bgView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -45).isActive = true
+        bgView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -50).isActive = true
+        bgView.heightAnchor.constraint(equalToConstant: 380).isActive = true
+        
+//        bgView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
+        
+        
+        
+        
         UIView.animate(withDuration: 0.25) {
             self.view.alpha = 1
+            
         }
     }
     

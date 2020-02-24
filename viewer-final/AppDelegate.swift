@@ -20,13 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .white
         
         
-        let viewController = SplashViewController()
+        let viewController = WelcomeViewController()
         viewController.modalTransitionStyle = .crossDissolve
         let navigationController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
-        
+    
         
 //        let delay: TimeInterval = 1.75
 //        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
